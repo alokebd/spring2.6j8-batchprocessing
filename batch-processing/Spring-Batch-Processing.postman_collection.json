@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "c8b1ca97-df36-4c0f-8ffa-99b9ba837ad1",
+		"name": "Spring-Batch-Processing",
+		"description": "Check all APIs in Swagger:\n\n[http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "load-customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1002,\r\n  \"name\": \"Butter Chicken\",\r\n  \"qty\": 10,\r\n  \"price\": 85.25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2024/jobs/start"
+			},
+			"response": []
+		},
+		{
+			"name": "job-status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1002,\r\n  \"name\": \"Butter Chicken\",\r\n  \"qty\": 10,\r\n  \"price\": 85.25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2024/jobs/status"
+			},
+			"response": []
+		}
+	]
+}
